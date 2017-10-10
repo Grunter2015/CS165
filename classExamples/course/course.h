@@ -13,6 +13,8 @@ class Course
       string name;
 
    public:
+      Course();
+      Course(string name, int maxStudents);
       void addStudent();
       void dropStudent();
       void display();

@@ -21,11 +21,10 @@ void menu(int &selection)
 int main()
 {
    Course cs124;
-   Course cs165; 
+   Course cs165("CS 165",5); 
    int menuChoice;
 
    cs124.prompt();
-   cs165.prompt();
    
    do
    {

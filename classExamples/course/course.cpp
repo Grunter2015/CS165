@@ -3,6 +3,20 @@
 
 using namespace std;
 
+Course::Course()
+{
+   enrolled = 0;
+   maxStudents = 0;
+   name = "";
+}
+
+Course::Course(string name, int maxStudents)
+{
+   enrolled = 0;
+   this->maxStudents = maxStudents;
+   this->name = name;
+}
+
 void Course::addStudent()
 {
    if (enrolled < maxStudents)
@@ -41,7 +55,6 @@ void Course::prompt()
    cout << "Max students: ";
    cin >> maxStudents;
    cin.ignore(1); // Ignore the linefeed in case getline is called again.
-   enrolled = 0;
 }
 
 
