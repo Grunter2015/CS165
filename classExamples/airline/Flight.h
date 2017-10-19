@@ -22,14 +22,21 @@ class Flight
       float cost;
 
    public:
+      // Constructors
       Flight();
       Flight(string id, int miles, float cost);
+
+      // Accessors
       string getID() const;
       int getMiles() const;
       float getCost() const;
+
+      // Mutators
       void setID(string id);
       void setMiles(int miles);
       void setCost(float cost);
+
+      // Other Functions
       void display() const;
 };
 
