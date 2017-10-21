@@ -21,19 +21,12 @@ class Passenger
       Rewards rewards;
       
    public:
-      // Constructors
       Passenger();
-      Passenger(string name);
-
-      // Accessors
+      Passenger(string name, int initialRewards);
       string getName() const;
       Rewards getRewards() const;
-
-      // Mutators
       void setName(string name);
       void setRewards(Rewards rewards);
-
-      // Other Functions
       void display() const;
 };
 

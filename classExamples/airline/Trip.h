@@ -21,20 +21,14 @@ class Trip
       Flight flight;
 
    public:
-      // Constructors
       Trip();
       Trip(Passenger passenger, Flight flight);
-   
-      // Accessors
       Passenger getPassenger() const;
       Flight getFlight() const;
-
-      // Mutators
       void setPassenger(Passenger passenger);
       void setFlight(Flight flight);
-
-      // Other Functions
       void display() const;
+      float calculateCost() const;
 };
 
 #endif

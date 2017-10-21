@@ -10,6 +10,11 @@ Rewards::Rewards()
    setMiles(0);
 }
 
+Rewards::Rewards(int miles)
+{
+   setMiles(miles);
+}
+
 // Accessor: miles
 int Rewards::getMiles() const
 {
@@ -30,5 +35,14 @@ void Rewards::setMiles(int miles)
       this->miles = miles;
    }
 }
+
+bool Rewards::getGoldStatus() const
+{
+   if (miles >= 100000) 
+   {
+      return true;
+   }
+   return false;
+}  
 
 

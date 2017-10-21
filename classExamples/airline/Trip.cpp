@@ -45,12 +45,30 @@ void Trip::setFlight(Flight flight)
    this->flight = flight;
 }
 
+float Trip::calculateCost() const
+{
+   float cost = flight.getCost();
+
+   if (passenger.getRewards().getGoldStatus())
+   {
+      cost *= 0.90;
+   }
+
+   cost *= 1.12;
+
+   return cost;
+}
+
 // Display all information relevant to the trip
 void Trip::display() const
 {
    cout << endl;
    passenger.display();
    flight.display();
+   cout.precision(2);
+   cout.setf(ios::fixed);
+   cout.setf(ios::showpoint);
+   cout << "Total Cost: $" << calculateCost() << endl;
    cout << "--------------------------" << endl;
 }
       

@@ -16,14 +16,11 @@ class Rewards
       int miles;
 
    public:
-      // Constructors
       Rewards();
-    
-      // Accessors
+      Rewards(int miles);
       int getMiles() const;
-
-      // Mutators
       void setMiles(int miles);
+      bool getGoldStatus() const;
 };
 
 #endif

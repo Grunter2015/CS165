@@ -12,8 +12,7 @@ Passenger::Passenger()
 
 // Non-Default Constructor
 // Name is set to value provided by object owner
-// Rewards is set to default values
-Passenger::Passenger(string name)
+Passenger::Passenger(string name, int initialRewards) : rewards(initialRewards)
 {
    setName(name);
 }
@@ -51,5 +50,9 @@ void Passenger::display() const
 {
    cout << "Passenger Name: " << name << endl;
    cout << "Rewards Miles: " << rewards.getMiles() << endl;
+   if (rewards.getGoldStatus())
+   {
+      cout << "GOLD STATUS MEMBER!" << endl;
+   } 
 }
 
