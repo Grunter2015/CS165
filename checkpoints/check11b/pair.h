@@ -36,11 +36,12 @@ class Pair
          this->item2 = item2;
       }
 
-      void display()
-      {
-         cout << item1 << " - " << item2; 
-      }
-
 };
+
+template<class T1, class T2>
+void Pair<T1,T2>::display()
+{
+   cout << item1 << " - " << item2;
+}
 
 #endif // PAIR_H
