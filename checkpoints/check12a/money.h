@@ -60,11 +60,11 @@ inline bool operator !=(const Money &lhs, const Money &rhs)
    return !(lhs == rhs);
 }
 
-inline ostream& operator <<(ostream &out, const Money &rhs)
+inline ostream& operator <<(ostream &lhs, const Money &rhs)
 {
    float money = rhs.getDollars() + (rhs.getCents() / 100.0);
-   out << "$" << money;
-   return out;
+   lhs << "$" << money;
+   return lhs;
 }
 
 

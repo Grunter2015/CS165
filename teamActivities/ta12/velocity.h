@@ -91,21 +91,21 @@ inline bool operator <=(const Velocity &lhs, const Velocity &rhs)
 }
 
 // Output Stream
-inline ostream& operator <<(ostream &out, const Velocity &rhs)
+inline ostream& operator <<(ostream &lhs, const Velocity &rhs)
 {
-   out << "(dx=" << rhs.getDx() << ", dy=" << rhs.getDy() << ")";
-   return out;
+   lhs << "(dx=" << rhs.getDx() << ", dy=" << rhs.getDy() << ")";
+   return lhs;
 }
 
 // Input Stream
-inline istream& operator >>(istream &in, Velocity &rhs)
+inline istream& operator >>(istream &lhs, Velocity &rhs)
 {
    float dx = 0.0;
    float dy = 0.0;
-   in >> dx >> dy;
+   lhs >> dx >> dy;
    rhs.setDx(dx);
    rhs.setDy(dy);
-   return in;
+   return lhs;
 }
 
 inline Velocity operator +(const Velocity &lhs, const Velocity &rhs)
