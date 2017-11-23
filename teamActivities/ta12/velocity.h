@@ -39,7 +39,7 @@ public:
       return result;
    }
 
-   inline friend Velocity operator -=(Velocity &lhs, const Velocity &rhs)
+   inline friend Velocity& operator -=(Velocity &lhs, const Velocity &rhs)
    {
       lhs.dx -= rhs.dx;
       lhs.dy -= rhs.dy;
