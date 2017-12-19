@@ -1,20 +1,10 @@
-/***********************************************************************
-* Program:
-*    Checkpoint 01A  
-*    Brother Macbeth, CS165
-* Author:
-*    Chad Macbeth 
-* Summary: 
-*    Summaries are not necessary for checkpoint assignments.
-* ***********************************************************************/
+// CS165 - Checkpoint 01A
+// Written by Chad Macbeth
 
 #include <iostream>
 using namespace std;
 
-/**********************************************************************
- * Function: main
- * Purpose: This is the entry point and driver for the program.
- ***********************************************************************/
+// Demonstrate proper use of cout/cin
 int main()
 {
    string name;

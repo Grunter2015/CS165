@@ -1,16 +1,10 @@
-/***********************************************************************
-* Program:
-*    Checkpoint 01B  
-*    Brother Macbeth, CS165
-* Author:
-*    Chad Macbeth 
-* Summary: 
-*    Summaries are not necessary for checkpoint assignments.
-* ***********************************************************************/
+// CS165 - Checkpoint 01B
+// Written by Chad Macbeth
 
 #include <iostream>
 using namespace std;
 
+// Prompt the user for the size of the list
 int getSize()
 {
     int size;
@@ -21,6 +15,10 @@ int getSize()
     return size;
 }
 
+// Populate the array with user provided values
+// Notice that the list is passed without a size in the
+// brackets.  The size must be passed as a seperate
+// parameter. 
 void getList(int list[], int size)
 {
    int i;
@@ -32,6 +30,8 @@ void getList(int list[], int size)
    }
 }
 
+// Traverse through the array and look for numbers
+// that are divisible by 3.  
 void displayMultiples(int list[], int size)
 {
    int i;
@@ -46,17 +46,14 @@ void displayMultiples(int list[], int size)
    }
 }
 
-/**********************************************************************
- * Function: main
- * Purpose: This is the entry point and driver for the program.
- ***********************************************************************/
+// Driver
 int main()
 {
    int list[20];
    int size;
 
    size = getSize();
-   getList(list, size);
+   getList(list, size);  // Don't do getList(list[20], size)
    displayMultiples(list, size);
 
    return 0;

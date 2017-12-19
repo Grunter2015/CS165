@@ -1,12 +1,5 @@
-/***********************************************************************
-* Program:
-*    Checkpoint 02b, Complex Numbers
-*    Brother {Burton, Falin, Ercanbrack}, CS165
-* Author:
-*    your name
-* Summary: 
-*    Summaries are not necessary for checkpoint assignments.
-* ***********************************************************************/
+// CS165 - Checkpoint 02B
+// Written by Chad Macbeth
 
 #include <iostream>
 using namespace std;
@@ -17,6 +10,7 @@ struct Complex
     double imaginary;
 };
 
+// Get the complex number
 void promptComplex(Complex &complex)
 {
     cout << "Real: ";
@@ -25,15 +19,13 @@ void promptComplex(Complex &complex)
     cin >> complex.imaginary;
 }
 
+// Display the complex number (constant)
 void display(const Complex complex)
 {
     cout << complex.real << " + " << complex.imaginary << "i";
 }
 
-/**********************************************************************
- * Function: addComplex
- * Purpose: Adds two complex numbers together and returns the sum.
- ***********************************************************************/
+// Add the 2 complex numbers and return a new complex number
 Complex addComplex(const Complex & x, const Complex & y)
 {
    Complex result;
@@ -44,11 +36,7 @@ Complex addComplex(const Complex & x, const Complex & y)
    return result;
 }
 
-
-/**********************************************************************
- * Function: main
- * Purpose: This is the entry point and driver for the program.
- ***********************************************************************/
+// Driver
 int main()
 {
    Complex c1;

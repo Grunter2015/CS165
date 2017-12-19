@@ -1,12 +1,5 @@
-/***********************************************************************
-* Program:
-*    Checkpoint ###, ????          (e.g. Checkpoint 01a, review)  
-*    Brother {Burton, Falin, Ercanbrack, Comeau}, CS165
-* Author:
-*    your name
-* Summary: 
-*    Summaries are not necessary for checkpoint assignments.
-* ***********************************************************************/
+// CS165 - Checkpoint 02A
+// Written by Chad Macbeth
 
 #include <iostream>
 using namespace std;
@@ -18,16 +11,15 @@ struct Student
     int id;
 };
 
-void displayStudent(const Student student)
+// Display the student information
+// Student is constant and passed by reference (because its a structure)
+void displayStudent(const Student &student)
 {
     cout << student.id << " - " << student.firstName << " " << 
             student.lastName << endl;
 }
 
-/**********************************************************************
- * Function: main
- * Purpose: This is the entry point and driver for the program.
- ***********************************************************************/
+// Driver
 int main()
 {
    Student student;
