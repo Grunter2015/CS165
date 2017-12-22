@@ -1,11 +1,5 @@
-/***********************************************************************
-* Program:
-*    Checkpoint 3B, Exceptions  
-*    Brother Macbeth, CS165
-* Author:
-*    Chad Macbeth
-* Summary: 
-************************************************************************/
+// CS165 Checkpoint 3B
+// Written by Chad Macbeth
 
 #include <iostream>
 #include <limits>

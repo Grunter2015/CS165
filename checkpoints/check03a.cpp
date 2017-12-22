@@ -1,11 +1,5 @@
-/***********************************************************************
-* Program:
-*    Checkpoint 3A, Exceptions  
-*    Brother Macbeth, CS165
-* Author:
-*    Chad Macbeth
-* Summary: 
-************************************************************************/
+// CS165 - Checkpoint 3A
+// Written by Chad Macbeth
 
 #include <iostream>
 using namespace std;
@@ -20,7 +14,7 @@ int prompt()
     // Peform error checking
     if (number < 0)
     {
-       throw string("The number cannot be negative.");
+       throw string("The number cannot be negative."); // Will exit the function
     }
     if (number > 100)
     {
@@ -43,7 +37,7 @@ int main()
    try
    {
       int value = prompt();
-      cout << "The number is " << value << "." << endl;
+      cout << "The number is " << value << "." << endl; // Won't execute if exception is thrown
    }
    catch (string s)
    {
