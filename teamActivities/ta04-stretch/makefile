@@ -1,4 +1,4 @@
-# CS165 Team Activity 04
+# CS165 Team Activity 04 - Stretch
 # Written by Chad Macbeth
 
 # We will learn fancier compilation steps later, but this is

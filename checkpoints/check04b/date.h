@@ -1,7 +1,5 @@
-/***********************************************************************
-* File: date.h
-* Purpose: Interface for the Date Class
-************************************************************************/
+// CS165 Checkpoint 04B
+// Written by Chad Macbeth
 
 #ifndef DATE_H
 #define DATE_H
@@ -17,7 +15,7 @@ class Date
 
    public:
       void set(int month, int day, int year);
-      void displayAmerican() const;
+      void displayAmerican() const;  // const == will not modify member data
       void displayEuropean() const;
       void displayISO() const;
 };

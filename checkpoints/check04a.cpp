@@ -1,12 +1,5 @@
-/***********************************************************************
-* Program:
-*    Checkpoint 4A, Classes  
-*    Brother Macbeth, CS165
-* Author:
-*    Chad Macbeth
-* Summary: 
-*    Create a book class
-************************************************************************/
+// CS 165 Checkpoint 4A
+// Written by Chad Macbeth
 
 #include <iostream>
 using namespace std;
@@ -19,36 +12,30 @@ class Book
 
    public:
       void prompt();
-      void display() const;
+      void display() const;  // const means it will not change class variables
 };
 
-/**********************************************************************
- * Prompt for data in the Book
- * ********************************************************************/
+// Prompt for data in the book
 void Book::prompt()
 {
    cout << "Title: ";
-   getline(cin, title);
+   getline(cin, title);  // Saves the data into the class object
    cout << "Author: ";
    getline(cin, author);
 }
 
-/**********************************************************************
- * Display the data in the Book
- * ********************************************************************/
+// Display the data in the book
 void Book::display() const
 {
    cout << "\"" << title << "\" by " << author << endl; 
 }
 
-/**********************************************************************
- * Demonstrate the use of the Book class
- ***********************************************************************/
+// Driver
 int main()
 {
-   Book myBook;
+   Book myBook;  // myBook is an object (variable) of class (type) Book
 
-   myBook.prompt();
+   myBook.prompt();  // Use the dot notation (like structs) to call functions
    myBook.display();
       
    return 0;

@@ -1,7 +1,5 @@
-/***********************************************************************
-* File: check04b.cpp
-* Purpose: Demonstrate the use of the Date class
-************************************************************************/
+// CS165 Checkpoint 04B
+// Written by Chad Macbeth
 
 #include <iostream>
 #include "date.h"

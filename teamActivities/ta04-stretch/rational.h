@@ -1,4 +1,4 @@
-// CS165 Team Activity 04
+// CS165 Team Activity 04 - Stretch
 // Written by CHad Macbeth
 
 #ifndef RATIONAL_H
@@ -16,6 +16,8 @@ class Rational
       void prompt();
       void display() const;
       void displayDecimal() const;
+      void multiplyBy(Rational *r); // Accepts a pointer to a Rational Object
+      void reduce();
 };
 
 #endif
