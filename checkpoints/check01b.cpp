@@ -19,7 +19,7 @@ int getSize()
 // Notice that the list is passed without a size in the
 // brackets.  The size must be passed as a seperate
 // parameter. 
-void getList(int list[], int size)
+void getList(int list[], const int size)
 {
    int i;
 
@@ -32,7 +32,7 @@ void getList(int list[], int size)
 
 // Traverse through the array and look for numbers
 // that are divisible by 3.  
-void displayMultiples(int list[], int size)
+void displayMultiples(const int list[], const int size)
 {
    int i;
 

@@ -6,7 +6,7 @@
 using namespace std;
 
 // Set the date components to the values provided by the user
-void Date::set(int month, int day, int year)
+void Date::set(const int month, const int day, const int year)
 {
    this->month = month;
    this->day = day;

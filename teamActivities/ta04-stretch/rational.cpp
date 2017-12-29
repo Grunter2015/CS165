@@ -44,12 +44,10 @@ void Rational::displayDecimal() const
 }
 
 // Multiply the rational number by a user supplied rational number.  
-// A pointer to the object is provided (could have also done Rational &r to
-// pass by reference)
-void Rational::multiplyBy(Rational *r)
+void Rational::multiplyBy(const Rational &r)
 {
-   top = top * r->top; // Because r is pointer, must use -> notation
-   bottom = bottom * r->bottom;
+   top = top * r.top; 
+   bottom = bottom * r.bottom;
 }
 
 // Reduce a fraction by finding the greatest common divisor (gcd).

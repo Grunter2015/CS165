@@ -5,29 +5,29 @@
 
 class Robot
 {
-private:
-   Point position;
-   int energy;
-   Point mines[3];
+   private:
+      Point position;
+      int energy;
+      Point mines[3];
 
-public:
-   Robot();
-   Robot(int energy);
-   Robot(Point position, int energy);
-   void display() const;
-   int getEnergy() const;
-   Point getPosition() const;
-   void setEnergy(int energy);
-   void setPosition(Point position);
-   void moveUp();
-   void moveDown();
-   void moveLeft();
-   void moveRight();
-   void fireLaser();
+   public:
+      Robot();
+      Robot(const int energy);
+      Robot(const Point &position, const int energy);
+      void display() const;
+      int getEnergy() const { return energy; }
+      Point getPosition() const { return position; }
+      void setEnergy(const int energy);
+      void setPosition(const Point &position) { this->position = position; }
+      void moveUp();
+      void moveDown();
+      void moveLeft();
+      void moveRight();
+      void fireLaser();
 
-private:
-   void setMines();
-   bool onMine();
+   private:
+      void setMines();
+      bool onMine() const;
 
 };
 

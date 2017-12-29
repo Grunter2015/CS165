@@ -1,6 +1,6 @@
-/******************
- * File: money.h
- ******************/
+// CS165 Checkpoint 5B
+// WRitten by CHad Macbeth
+
 #ifndef MONEY_H
 #define MONEY_H
 
@@ -12,14 +12,14 @@ private:
 
 public:
    Money();
-   Money(int dollars);
-   Money(int dollars, int cents);
+   Money(const int dollars);
+   Money(const int dollars, const int cents);
    void prompt();
    void display() const;
-   int getDollars() const;
-   int getCents() const;
-   void setDollars(int dollars);
-   void setCents(int cents);
+   int getDollars() const { return dollars; }
+   int getCents() const { return cents; }
+   void setDollars(const int dollars);
+   void setCents(const int cents);
 };
 
 #endif

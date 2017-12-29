@@ -16,7 +16,7 @@ class Rational
       void prompt();
       void display() const;
       void displayDecimal() const;
-      void multiplyBy(Rational *r); // Accepts a pointer to a Rational Object
+      void multiplyBy(const Rational &r); 
       void reduce();
 };
 

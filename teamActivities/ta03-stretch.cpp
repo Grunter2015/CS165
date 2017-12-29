@@ -33,7 +33,7 @@ void display(const Scripture &scripture)
 }
 
 // Parse the line into a scripture structure
-void parseLine(const string line, Scripture &scripture)
+void parseLine(const string &line, Scripture &scripture)
 {
    // A stringstream is a stream that is initialized with a string.
    // When we read from this stream, we will get one word at a time.

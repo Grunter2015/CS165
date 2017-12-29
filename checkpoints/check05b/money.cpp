@@ -1,6 +1,5 @@
-/***********************
- * File: money.cpp
- ***********************/
+// CS165 Checkpoint 5B
+// Written by Chad Macbeth
 
 #include <iostream>
 #include <iomanip>
@@ -8,19 +7,22 @@ using namespace std;
 
 #include "money.h"
 
+// Initialize a Money object with default values
 Money::Money()
 {
    setDollars(0);
    setCents(0);
 }
 
-Money::Money(int dollars)
+// Initialize a Money object with user defined dollars
+Money::Money(const int dollars)
 {
    setDollars(dollars);
    setCents(0);
 }
 
-Money::Money(int dollars, int cents)
+// Initialize a Money object with user defined dollars and cents
+Money::Money(const int dollars, const int cents)
 {
    setDollars(dollars);
    setCents(cents);
@@ -56,17 +58,10 @@ void Money :: display() const
    cout << setfill('0') << setw(2) << getCents();
 }
 
-inline int Money::getDollars() const
-{
-   return dollars;
-}
-
-inline int Money::getCents() const
-{
-   return cents;
-}
-
-void Money::setDollars(int dollars)
+// Mutator: dollars
+// Validation: Must be a positive number >= 0
+// Error Handling: Take the absolute value
+void Money::setDollars(const int dollars)
 {
    if (dollars >= 0)
    { 
@@ -78,7 +73,10 @@ void Money::setDollars(int dollars)
    }
 }
 
-void Money::setCents(int cents)
+// Mutator: cents
+// Validation: Must be a positive number >= 0
+// Error Handling: Take the absolute value
+void Money::setCents(const int cents)
 {
    if (cents >= 0)
    {

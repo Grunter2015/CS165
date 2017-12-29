@@ -19,14 +19,16 @@ void promptComplex(Complex &complex)
     cin >> complex.imaginary;
 }
 
-// Display the complex number (constant)
-void display(const Complex complex)
+// Display the complex number (constant passed by reference)
+void display(const Complex &complex)
 {
     cout << complex.real << " + " << complex.imaginary << "i";
 }
 
 // Add the 2 complex numbers and return a new complex number
-Complex addComplex(const Complex & x, const Complex & y)
+// It is customary to pass structures by reference (due to size).
+// However, they are also marked constant, so they can't be udpated.
+Complex addComplex(const Complex &x, const Complex &y)
 {
    Complex result;
 

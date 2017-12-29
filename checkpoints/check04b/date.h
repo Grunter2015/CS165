@@ -14,8 +14,8 @@ class Date
       int year;
 
    public:
-      void set(int month, int day, int year);
-      void displayAmerican() const;  // const == will not modify member data
+      void set(const int month, const int day, const int year);
+      void displayAmerican() const;  // const means will not modify member data
       void displayEuropean() const;
       void displayISO() const;
 };

@@ -1,6 +1,5 @@
-/***********************
- * File: money.cpp
- ***********************/
+// CS165 Checkpoing 5B
+// Written by Chad Macbeth
 
 #include <iostream>
 #include <iomanip>
@@ -38,21 +37,13 @@ void Money :: display() const
    cout << setfill('0') << setw(2) << getCents();
 }
 
-/* Inline Option 3 */
-inline int Money::getDollars() const
-{
-   return dollars;
-}
-
-inline int Money::getCents() const
-{
-   return cents;
-}
-
-void Money::setDollars(int dollars)
+// Mutator: dollars
+// Validation: Must be a positive number >= 0
+// Error Handling: Take the absolute value
+void Money::setDollars(const int dollars)
 {
    if (dollars >= 0)
-   { 
+   {
       this->dollars = dollars;
    }
    else
@@ -61,7 +52,10 @@ void Money::setDollars(int dollars)
    }
 }
 
-void Money::setCents(int cents)
+// Mutator: cents
+// Validation: Must be a positive number >= 0
+// Error Handling: Take the absolute value
+void Money::setCents(const int cents)
 {
    if (cents >= 0)
    {

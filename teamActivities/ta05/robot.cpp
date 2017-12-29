@@ -21,26 +21,6 @@ Robot::Robot(Point position, int energy)
    setMines();
 }
 
-/************************************
- * Function: Display
- * Purpose: Displays the robot.
- ************************************/
-void Robot :: display() const
-{
-   position.display();
-   cout << " - Energy: " << getEnergy();
-}
-
-inline int Robot::getEnergy() const
-{
-   return energy;
-}
-
-inline Point Robot::getPosition() const
-{
-   return position;
-}
-
 void Robot::setEnergy(int energy)
 {
    if (energy < 0)
@@ -51,11 +31,6 @@ void Robot::setEnergy(int energy)
    {
       this->energy = energy;
    }
-}
-
-void Robot::setPosition(Point position)
-{
-   this->position = position;
 }
 
 void Robot::moveUp()
@@ -182,4 +157,15 @@ bool Robot::onMine()
    }
    return false;
 }
+
+/************************************
+ * Function: Display
+ * Purpose: Displays the robot.
+ * ************************************/
+void Robot :: display() const
+{
+   position.display();
+   cout << " - Energy: " << getEnergy();
+}
+
 

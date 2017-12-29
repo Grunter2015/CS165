@@ -20,7 +20,7 @@ int main()
 
    cout << endl;
    r2.prompt();
-   r.multiplyBy(&r2); // Send the address of the r2 object
+   r.multiplyBy(r2); 
    r.display();
 
    r.reduce();

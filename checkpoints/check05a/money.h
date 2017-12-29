@@ -1,6 +1,6 @@
-/******************
- * File: money.h
- ******************/
+// CS165 Checkpoing 5A
+// Written by Chad Macbeth
+
 #ifndef MONEY_H
 #define MONEY_H
 
@@ -13,34 +13,10 @@ private:
 public:
    void prompt();
    void display() const;
-   int getDollars() const;
-   int getCents() const;
-/* Inline Option 1 
-   int getDollars() const
-   {
-      return dollars;
-   }
-
-   int getCents() const
-   {
-      return cents;
-   }
-*/
-   void setDollars(int dollars);
-   void setCents(int cents);
+   int getDollars() const { return dollars; }
+   int getCents() const { return cents; }
+   void setDollars(const int dollars);
+   void setCents(const int cents);
 };
-
-/* Inline Option 2 
-
-inline int Money::getDollars() const
-{
-   return dollars;
-}
-
-inline int Money::getCents() const
-{
-   return cents;
-}
-*/
 
 #endif

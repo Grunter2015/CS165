@@ -13,6 +13,7 @@ struct Student
 
 // Display the student information
 // Student is constant and passed by reference (because its a structure)
+// However it is a constant so it cannot be modified
 void displayStudent(const Student &student)
 {
     cout << student.id << " - " << student.firstName << " " << 
