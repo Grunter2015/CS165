@@ -1,3 +1,6 @@
+// CS165 Checkpoint 07A
+// Written by Chad Macbeth
+
 /***********************************
  * File: icecream.cpp
  ***********************************/
@@ -23,6 +26,10 @@ IceCream::IceCream(string flavor, float price)
    this->price = price;
 }
 
+// The sales tax is member data that is static.  Since it is static,
+// it needs to be initialized prior to use.  Constructor can't be used
+// for this because static data needs to be used without creating an
+// object (which is what a constructor is for).  Here is the syntax:
 float IceCream::salesTax = 0.06;
 
 /**********************************************************************
@@ -31,7 +38,7 @@ float IceCream::salesTax = 0.06;
  **********************************************************************/
 float IceCream::getTotalPrice() const
 {
-   return (price * (1.0 + salesTax));
+   return (price * (1.0 + salesTax));  // Static data can be used in member functions
 }
 
 /**********************************************************************

@@ -1,12 +1,5 @@
-/***********************************************************************
-* Program:
-*    Checkpoint 10a, Vectors
-*    Brother Macbeth, CS165
-* Author:
-*    Chad Macbeth
-* Summary: 
-*    Summaries are not necessary for checkpoint assignments.
-************************************************************************/
+// CS165 Checkpoint 10A
+// Written by Chad Macbeth
 
 #include <iostream>
 #include <vector>
@@ -24,39 +17,36 @@ int main()
    int inputInt;
    string inputString;
 
-   // NOTE: Iterators are implemented below as examples.  I commented out the cout's so 
-   // this file will pass testBed.
-
    do
    {
       cout << "Enter int: ";
       cin >> inputInt;
       if (inputInt != 0)
       {
-         numbers.push_back(inputInt);
+         numbers.push_back(inputInt); // Add to the back of the vector
       }
    }
    while (inputInt != 0);
 
    cout << "Your list is:\n";
 
-   /* Implement without an iterator */
-
+   // Option 1: Implement without an iterator (simple solution) 
    for (int i=0; i<numbers.size(); i++)
    {
       cout << numbers[i] << endl;
    }
 
-   /* Implement with an iterator using while loop */
-
-   vector<int>::iterator numbersIter = numbers.begin();
+   // Option 2: Implement with an iterator using while loop 
+   vector<int>::iterator numbersIter = numbers.begin(); // Start the iterator at the beginning
    while (numbersIter != numbers.end())
    {
-      //cout << *numbersIter << endl;
-      numbersIter++;
+      //cout << *numbersIter << endl;  // The use of * gives you the value at this iteration point
+      numbersIter++;  // Goto the next one
    }
 
-   /* Implement with an iterator using for loop */
+   // Option 3: Implement with an iterator using for loop
+   // I do not prefer this method because the length is not known.
+   // I only use for loops when the number of iterations is known. 
    for (vector<int>::iterator iter = numbers.begin(); iter != numbers.end(); iter++)
    {
       //cout << *iter << endl;
@@ -80,20 +70,6 @@ int main()
    for (int i=0; i<strings.size(); i++)
    {
       cout << strings[i] << endl;
-   }
-
-   /* Implement with an iterator using while loop */
-   vector<string>::iterator stringsIter = strings.begin();
-   while (stringsIter != strings.end())
-   {
-      //cout << *stringsIter << endl;
-      *stringsIter++;
-   }
-
-   /* Implement with an itereator using for loop */
-   for (vector<string>::iterator iter = strings.begin(); iter != strings.end(); iter++)
-   {
-      //cout << *iter << endl;
    }
 
    return 0;

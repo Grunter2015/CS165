@@ -1,6 +1,5 @@
-/*****************
- * check08b.cpp
- *****************/
+// CS165 Checkpoint 08B
+// Written by Chad Macbeth
 
 #include "phone.h"
 #include "smartphone.h"

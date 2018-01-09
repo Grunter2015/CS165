@@ -1,12 +1,5 @@
-/***********************************************************************
-* Program:
-*    Checkpoint 08a, Inheritance
-*    Brother {Burton, Falin, Ercanbrack}, CS165
-* Author:
-*    your name
-* Summary: 
-*    Summaries are not necessary for checkpoint assignments.
-* ***********************************************************************/
+// CS165 Checkpoint 08A
+// Written by Chad Macbeth
 
 #include <iostream>
 #include <string>
@@ -23,6 +16,7 @@ class Book
       int publicationYear;
 
    public:
+      // Prompt for book title, author, and publication year
       void promptBookInfo()
       {
          cout << "Title: ";
@@ -31,9 +25,10 @@ class Book
          getline(cin,author);
          cout << "Publication Year: ";
          cin >> publicationYear;
-         cin.ignore(1);
+         cin.ignore(1); // Allow for getline to be called again
       }
 
+      // Display the book information
       void displayBookInfo() const
       {
          cout << title << " (" << publicationYear << ") by " << author << endl;
@@ -47,12 +42,14 @@ class TextBook : public Book
       string subject;
 
    public:
+      // Prompt for text book subject 
       void promptSubject()
       {
          cout << "Subject: ";
          getline(cin,subject);
       }
-   
+  
+      // Display the text book subject 
       void displaySubject() const
       {
          cout << "Subject: " << subject << endl;
@@ -65,12 +62,14 @@ class PictureBook : public Book
       string illustrator;
 
    public:
+      // Prompt for the picture book illustrator
       void promptIllustrator() 
       {
          cout << "Illustrator: ";
          getline(cin,illustrator);
       }
- 
+
+      // Display the picture book illustrator 
       void displayIllustrator() const
       {
          cout << "Illustrated by " << illustrator << endl;

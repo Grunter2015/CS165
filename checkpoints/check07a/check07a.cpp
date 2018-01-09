@@ -1,6 +1,5 @@
-/**********************
- * File: check07a.cpp
- **********************/
+// CS165 Checkpoint 07A
+// Written by Chad Macbeth
 
 #include <iostream>
 #include <string>
@@ -30,7 +29,10 @@ int main()
    cout << "Enter alternate sales tax: ";
    cin >> tax;
 
-   IceCream::salesTax = tax;
+   // salesTax is public so it can be set.  Its static
+   // so no object is needed.  IceCream:: is used to
+   // tell the compile which class salesTax is part of.
+   IceCream::salesTax = tax;   
 
 
    cout << "\nMenu:\n";

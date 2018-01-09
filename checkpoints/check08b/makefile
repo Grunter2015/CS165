@@ -1,16 +1,9 @@
-###############################################################
-# Program:
-#     Checkpoint 08b, More inheritance
-#     Brother {Burton, Falin, Ercanbrack}, CS165
-# Author:
-#     your name here
-# Summary:
-#     Summaries are not necessary for checkpoint assignments.
-###############################################################
-
+# CS165 Checkpoint 08B
+# Written by Chad Macbeth
 
 a.out : phone.o smartphone.o check08b.o
 	g++ phone.o smartphone.o check08b.o
+	tar cvf check08b.tar makefile *.cpp *.h
 
 phone.o : phone.h phone.cpp
 	g++ -c phone.cpp
@@ -22,5 +15,5 @@ check08b.o : smartphone.h phone.h check08b.cpp
 	g++ -c check08b.cpp
 
 clean :
-	rm *.o a.out
+	rm *.o a.out *.tar
 

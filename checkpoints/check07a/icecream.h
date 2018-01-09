@@ -1,3 +1,6 @@
+// CS165 Checkpoint 07A
+// Written by Chad Macbeth
+
 /****************************
  * File: icecream.h
  ****************************/
@@ -19,7 +22,7 @@ public:
    float getTotalPrice() const;
    void prompt();
    void display() const;
-   static float salesTax;
+   static float salesTax;  // salesTax is public and static
 };
 
 

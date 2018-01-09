@@ -1,6 +1,5 @@
-/***********************************************************************
-* File: check07b.cpp
-************************************************************************/
+// CS165 Checkpoint 07B
+// Written by Chad Macbeth
 
 #include <iostream>
 using namespace std;
@@ -18,10 +17,10 @@ int main()
    cout << "Starting Program.\n";
 
    // 1. Add code here to declare a World
-   World *world = new World();
+   World *world = new World(); 
 
    // 2. Add code here to call the world's display function
-   world->display();
+   world->display();  // Because world is a pointer, use the arrow (->)
 
    /* You CANNOT just do this:
    World w;
@@ -32,7 +31,7 @@ int main()
    Voxel air(180, 200, 255, 'A');
 
    // 3. Call setBox on your world to put the air at spot (50, 60, 70)
-   world->setBox(50, 60, 70, air);
+   world->setBox(50, 60, 70, air);  
 
    // Next, we create a voxel for grass
    Voxel grass(25, 255, 50, 'G');
@@ -45,7 +44,7 @@ int main()
    world->displayBox(45, 20, 10);
 
    // 6. Finally, make sure to free up your memory by deleting the world
-   delete world; 
+   delete world; // Always need to deallocate memory when you use the "new"
 
    cout << "Ending Program.\n";
    return 0;

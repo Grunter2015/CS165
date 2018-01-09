@@ -1,6 +1,5 @@
-/****************
- * smartphone.h
- ****************/
+// CS165 Checkpoint 08B
+// Written by Chad Macbeth
 
 #ifndef SMARTPHONE_H
 #define SMARTPHONE_H

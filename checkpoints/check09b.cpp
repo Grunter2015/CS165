@@ -1,12 +1,5 @@
-/***********************************************************************
-* Program:
-*    Checkpoint 09b, Pure Virtual Functions
-*    Brother {Burton, Falin, Ercanbrack}, CS165
-* Author:
-*    your name
-* Summary: 
-*    Summaries are not necessary for checkpoint assignments.
-* ***********************************************************************/
+// CS165 Checkpoint 9B
+// Written by Chad Macbeth
 
 #include <iostream>
 #include <iomanip>
@@ -24,9 +17,8 @@ private:
 public:
    virtual ~Shape() { }
    string getName() const { return name; }
-   void setName(string name) { this->name = name; }
-   virtual float getArea() = 0;
-
+   void setName(const string &name) { this->name = name; }
+   virtual float getArea() const = 0;
 };
 
 class Circle : public Shape
@@ -35,16 +27,30 @@ private:
    float radius;
 
 public:
-   Circle() { setName("Circle"); }
-   ~Circle()
-   {
-      cout << "Cleaning up " << getName() << endl;
-   }
-
+   Circle();
+   ~Circle();
    float getRadius() const { return radius; }
-   void setRadius(float radius) { this->radius = radius; }
-   float getArea() {return 3.14 * radius * radius;}
+   void setRadius(const float radius) { this->radius = radius; }
+   float getArea() const; 
 };
+
+// Initialize the circle object
+Circle::Circle()
+{
+   setName("Circle");
+}
+
+// Deallocate the circle object
+Circle::~Circle()
+{
+   cout << "Cleaning up " << getName() << endl;
+}
+
+// Calculate the area
+float Circle::getArea() const 
+{
+   return 3.14 * radius * radius;
+}
 
 class Rectangle : public Shape
 {
@@ -53,18 +59,32 @@ private:
    float width;
 
 public:
-   Rectangle() { setName("Rectangle"); }
-   ~Rectangle()
-   {
-      cout << "Cleaning up " << getName() << endl;
-   }
-
+   Rectangle();
+   ~Rectangle();
    float getLength() const { return length; }
    float getWidth() const { return width; }
-   void setLength(float length) { this->length = length; }
-   void setWidth(float width) {this->width = width; }
-   float getArea() {return length*width; }
+   void setLength(const float length) { this->length = length; }
+   void setWidth(const float width) {this->width = width; }
+   float getArea() const; 
 };
+
+// Initialize the rectangle object
+Rectangle::Rectangle()
+{
+   setName("Rectangle");
+}
+
+// Deallocate the rectanable object
+Rectangle::~Rectangle()
+{
+   cout << "Cleaning up " << getName() << endl;
+}
+
+// Calculate the area
+float Rectangle::getArea() const
+{
+   return length * width;
+}
 
 const int MAX_SIZE = 10;
 

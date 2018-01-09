@@ -1,6 +1,5 @@
-/***************
- * phone.h
- ***************/
+// CS165 Checkpoint 08B
+// Written by Chad Macbeth
 
 #ifndef PHONE_H
 #define PHONE_H

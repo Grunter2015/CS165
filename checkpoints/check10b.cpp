@@ -1,12 +1,6 @@
-/***********************************************************************
-* Program:
-*    Checkpoint 10b, Removing from Vectors
-*    Brother Macbeth, CS 165
-* Author:
-*    Chad Macbeth
-* Summary: 
-*    Summaries are not necessary for checkpoint assignments.
-************************************************************************/
+// CS165 Checkpoint 10B
+// Written by Chad Macbeth
+
 #include <iostream>
 #include <string>
 #include <vector>
@@ -155,11 +149,18 @@ void removeExpiredItems(vector<Food*> &items, int currentMonth,
       if (((*iter)->getYear() < currentYear) ||
           ((*iter)->getYear() == currentYear && (*iter)->getMonth() < currentMonth))
       {
+         // Delete the object from the heap
          delete *iter;
-         iter = items.erase(iter);
+ 
+         // Remove the address to the deleted object from the vector
+         // When you erase something from a vector, you receive an updated
+         // iterator location (makes it easy to keep track ... another good
+         // reason to use a while loop for iterators)
+         iter = items.erase(iter);  
       }
       else
       {
+         // If nothing to delete, then just move to the next one
          iter++;
       }
    }
