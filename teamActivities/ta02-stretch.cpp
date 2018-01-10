@@ -28,7 +28,7 @@ void promptScripture(Scripture &scripture)
    cin >> scripture.chapter;
    cout << "Verse: ";
    cin >> scripture.verse;
-   cin.ignore(); // Ignore the \n from the previous cin
+   cin.ignore(1); // Ignore the \n from the previous cin
 }
 
 // Prompt for a scripture and an insight
